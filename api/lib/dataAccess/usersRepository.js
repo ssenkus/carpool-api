@@ -1,9 +1,9 @@
 'use strict';
 
-var db = require('./mongoClientWrapper.js');
-var ObjectID = require('mongodb').ObjectID;
-var _ = require('underscore');
-var util = require('./repositoryUtil.js');
+const db = require('./mongoClientWrapper.js');
+const ObjectID = require('mongodb').ObjectID;
+const _ = require('underscore');
+const util = require('./repositoryUtil.js');
 // var User = require('../models/user.js');
 
 exports.create = function (user, done) {
@@ -26,7 +26,6 @@ exports.getById = function (userId, done) {
 };
 
 exports.findUsers = function(email, firstName, lastName, showAnonymous, done) {
-
     db.users().find({}).toArray(function (err, docs) {
         if (err) return done(err);
 
@@ -50,17 +49,18 @@ exports.getAllUsers = function (done) {
     });
 };
 
-exports.update = function (user, done) {
-    util.convertToObjectId(user);
-    db.users().update(
-        {_id: user._id},
-        user,
-        function (err) {
-            util.convertFromObjectId(user);
-            return done(err);
-        }
-    );
-};
+// TODO: add route and use this method
+// exports.update = function (user, done) {
+//     util.convertToObjectId(user);
+//     db.users().update(
+//         {_id: user._id},
+//         user,
+//         function (err) {
+//             util.convertFromObjectId(user);
+//             return done(err);
+//         }
+//     );
+// };
 
 exports.delete = function (userId, done) {
     db.users().removeOne({_id: new ObjectID(userId)}, function (err, result) {

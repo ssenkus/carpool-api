@@ -30,7 +30,8 @@ function getUserById(req, res, next) {
 
 function createUser(req, res, next) {
     // TODO: placeholder for creating user
-    usersRepo.create(new User('NEW USER' + new Date().getTime()), (err, user) => {
+    console.log(req);
+    usersRepo.create(new User(req.body.name), (err, user) => {
         if (err) return next(err);
         res.json(user);
     });
