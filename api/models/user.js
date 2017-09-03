@@ -1,10 +1,11 @@
 'use strict';
 
 class User {
-    constructor() {
-        this.name = 'Test';
+
+    constructor(name) {
+        this.name = name;
     }
 }
 
 
-exports.User = User;
+module.exports = User;

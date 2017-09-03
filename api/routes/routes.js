@@ -6,4 +6,6 @@ exports.configure =  (app) => {
         console.log('Test route');
     });
 
+    require('./userRoutes.js').configure(app);
+
 };
