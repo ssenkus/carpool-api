@@ -1,11 +1,14 @@
 'use strict';
+const userRoutes = require('./userRoutes.js');
+const log = require('../log.js');
 
 exports.configure =  (app) => {
 
-    app.get('/', () => {
-        console.log('Test route');
+    app.get('/', (req, res, next) => {
+        log.debug('Test route');
+        next();
     });
 
-    require('./userRoutes.js').configure(app);
+    userRoutes.configure(app);
 
 };
