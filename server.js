@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const routes = require('./api/routes/routes.js');
+const routes = require('./api/lib/routes/routes.js');
 let app = express();
 let port = process.env.PORT || 3000;
 
