@@ -38,7 +38,7 @@ exports.findUsers = function(email, firstName, lastName, showAnonymous, done) {
     });
 };
 
-exports.getAll = function (done) {
+exports.getAllUsers = function (done) {
     db.users().find().toArray(function (err, docs) {
         if (err) return done(err);
 
