@@ -1,0 +1,26 @@
+{
+  "name": "carpool-api",
+  "version": "1.0.0",
+  "description": "Carpool API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssenkus/carpool-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssenkus/carpool-api/issues"
+  },
+  "homepage": "https://github.com/ssenkus/carpool-api",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
