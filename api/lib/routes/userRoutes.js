@@ -6,7 +6,6 @@ let User = require('../models/user.js');
 
 
 exports.configure = (app) => {
-
     app.get('/users/:userId', getUserById);
     app.get('/users', getAllUsers);
     app.post('/users', createUser);
