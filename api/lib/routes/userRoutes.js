@@ -12,7 +12,7 @@ exports.configure = (app) => {
     app.delete('/users/:userId', deleteUser);
 };
 
-
+// TODO: all: add validation to params, limit what comes in & out
 function getAllUsers(req, res, next) {
     usersRepo.getAllUsers((err, users) => {
         if (err) return next(err);

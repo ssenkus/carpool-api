@@ -44,3 +44,7 @@ exports.getDb = function () {
 exports.users = function () {
     return db.collection('users');
 };
+
+exports.trips = function () {
+    return db.collection('trips');
+};
