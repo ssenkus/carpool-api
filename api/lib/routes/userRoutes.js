@@ -29,8 +29,6 @@ function getUserById(req, res, next) {
 }
 
 function createUser(req, res, next) {
-    // TODO: placeholder for creating user
-    console.log(req);
     usersRepo.create(new User(req.body.name), (err, user) => {
         if (err) return next(err);
         res.json(user);
@@ -38,7 +36,6 @@ function createUser(req, res, next) {
 }
 
 function deleteUser(req, res, next) {
-    log.info('DELETING USER')
     usersRepo.delete(req.params.userId, (err) => {
         if (err) return next(err);
         res.json({

@@ -8,7 +8,9 @@ let app = express();
 let port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}))
+
 routes.configure(app);
+
 app.listen(port);
 
 log.info('API server started on: ' + port);
