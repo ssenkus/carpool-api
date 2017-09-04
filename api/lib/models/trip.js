@@ -2,9 +2,10 @@
 
 class Trip {
 
-    constructor(params) {
-        this.params = params;
+    constructor(destination) {
+        this.destination = destination;
     }
+
 }
 
 

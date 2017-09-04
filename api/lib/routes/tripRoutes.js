@@ -28,7 +28,7 @@ function getTripById(req, res, next) {
 }
 
 function createTrip(req, res, next) {
-    tripsRepo.create(new Trip(req.body.name), (err, trip) => {
+    tripsRepo.create(new Trip(req.body.destination), (err, trip) => {
         if (err) return next(err);
         res.json(trip);
     });
