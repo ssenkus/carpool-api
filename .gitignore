@@ -1,3 +1,6 @@
 node_modules
 # User-specific stuff:
 .idea/
+# nyc/Istanbul code coverage
+coverage/
+.nyc_output/

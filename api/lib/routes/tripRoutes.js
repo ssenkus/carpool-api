@@ -2,7 +2,7 @@
 
 const tripsRepo = require('../dataAccess/tripRepository.js');
 const log = require('../log.js');
-const Trip = require('../models/trip.js');
+const Trip = require('./trip.js');
 
 
 exports.configure = (app) => {
