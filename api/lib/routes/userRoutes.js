@@ -2,7 +2,7 @@
 
 const usersRepo = require('../dataAccess/usersRepository.js');
 const log = require('../log.js');
-let User = require('../models/user.js');
+let User = require('./user.js');
 
 
 exports.configure = (app) => {

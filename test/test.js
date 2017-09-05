@@ -1,4 +1,4 @@
-var assert = require('./util/chaiWrapper.js').assert;
+const assert = require('./util/chaiWrapper.js').assert;
 
 describe('test #unit', () => {
 
